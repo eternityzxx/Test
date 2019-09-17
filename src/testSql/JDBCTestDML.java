@@ -17,13 +17,13 @@ public class JDBCTestDML {
 		int count = 0;
         try {
         	//1注册驱动(第一种方式注册驱动)
-			//Driver driver = new com.mysql.cj.jdbc.Driver();//获取数据库驱动对象
-			//DriverManager.registerDriver(driver);//注册驱动
+			Driver driver = new com.mysql.cj.jdbc.Driver();//获取数据库驱动对象
+			DriverManager.registerDriver(driver);//注册驱动
         	
         	//第二种方式注册驱动：通过Java的反射机制创建注册驱动类
         	//Class.forName("com.first.jdbc.RegisterDriver");
         	//第三种方式注册驱动
-        	Class.forName("com.mysql.cj.jdbc.Driver");
+        	//Class.forName("com.mysql.cj.jdbc.Driver");
         	
 			//2获取数据库连接
 			String url = "jdbc:mysql://localhost:3306/first?serverTimezone=GMT&useSSL=false";
